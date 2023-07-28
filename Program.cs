@@ -10,7 +10,7 @@ builder.Services.AddControllersWithViews();
 //must mention what class has the implement of db context
 //When using sql server we must define the connection string
 builder.Services.AddDbContext<ApplicationDbContext>(options=>
-    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection1")));
+    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
 var app = builder.Build();
 

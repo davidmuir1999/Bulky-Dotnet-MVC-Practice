@@ -1,7 +1,7 @@
 using Microsoft.EntityFrameworkCore;
+using BulkyWebMVCProject.Models;
 
 namespace BulkyWebMVCProject.Data
-
 //This file will show basic configuration for entity framework
 {
     public class ApplicationDbContext : DbContext
@@ -18,5 +18,9 @@ namespace BulkyWebMVCProject.Data
         {
             
         }
+        //When creating a table we have to create a Db set within Db context.
+        //within <...> we define an entity class, the 'Categories' is the table name
+        // 
+        public DbSet<Category> Categories { get; set; }
     }
 }
