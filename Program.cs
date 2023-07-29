@@ -9,7 +9,7 @@ builder.Services.AddControllersWithViews();
 //adding db context basically saying we want to add entity framework core to project.
 //must mention what class has the implement of db context
 //When using sql server we must define the connection string
-builder.Services.AddDbContext<ApplicationDbContext>(options=>
+builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
 var app = builder.Build();
