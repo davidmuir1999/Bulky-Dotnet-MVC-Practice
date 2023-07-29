@@ -1,5 +1,4 @@
 using System.ComponentModel.DataAnnotations; //to use data annotation
-
 namespace BulkyWebMVCProject.Models
 {
     public class Category

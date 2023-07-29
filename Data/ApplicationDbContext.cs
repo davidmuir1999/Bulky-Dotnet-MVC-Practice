@@ -1,5 +1,5 @@
-using Microsoft.EntityFrameworkCore;
 using BulkyWebMVCProject.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace BulkyWebMVCProject.Data
 //This file will show basic configuration for entity framework
@@ -22,5 +22,17 @@ namespace BulkyWebMVCProject.Data
         //within <...> we define an entity class, the 'Categories' is the table name
         // 
         public DbSet<Category> Categories { get; set; }
+
+        //override the db function, default function that is already in db context
+        //this overrides the default behavior.
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            //building a model, the entity is we want to work on
+            modelBuilder.Entity<Category>().HasData(
+                new Category {Id = 1, Name = "Action", DisplayOrder = 1 },
+                new Category {Id = 2, Name = "SciFi", DisplayOrder = 2 },
+                new Category {Id = 3, Name = "History", DisplayOrder = 3 }
+            );
+        }
     }
 }
