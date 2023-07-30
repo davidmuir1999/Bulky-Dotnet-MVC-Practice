@@ -1,5 +1,4 @@
 <!-- When creating a view you should always thing about try answer is whatis the model of that view  -->
-
 @model Category
 
 <form method="post">
@@ -37,5 +36,11 @@
         </div>
     </div>
 </form>
+
+@section Scripts{
+    @{
+        <partial name="_ValidationScriptsPartial"/> //adding provided client side jquery validation 
+    }
+}
 
 

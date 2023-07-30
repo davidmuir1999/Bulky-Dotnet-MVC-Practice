@@ -26,13 +26,9 @@ namespace BulkyWebMVCProject.Controllers
         [HttpPost]
         public IActionResult Create(Category obj) //when creating a post method object category is needed
         {
-            if(obj.Name == obj.DisplayOrder.ToString())
+            if(obj.Name == obj.DisplayOrder.ToString()) // this is server side validation
             {
                 ModelState.AddModelError("name", "The Display Order cannot exactly match the Name.");
-            }
-            if(obj.Name.ToLower() == "test")
-            {
-                ModelState.AddModelError("", "Test is an invalid value");
             }
             if (ModelState.IsValid)// validation that will add new category to database only if validations are met
             {
