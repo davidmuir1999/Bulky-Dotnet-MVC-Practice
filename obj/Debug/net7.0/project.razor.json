@@ -18645,6 +18645,11 @@
   "RootNamespace": "BulkyWebMVCProject",
   "Documents": [
     {
+      "FilePath": "c:\\Users\\david\\Desktop\\Frontend Projects and Practice\\BulkyWebMVCProject\\Views\\Shared\\_Notification.cshtml",
+      "TargetPath": "Views\\Shared\\_Notification.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\david\\Desktop\\Frontend Projects and Practice\\BulkyWebMVCProject\\Views\\Shared\\Error.cshtml",
       "TargetPath": "Views\\Shared\\Error.cshtml",
       "FileKind": "mvc"

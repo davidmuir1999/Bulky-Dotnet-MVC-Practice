@@ -34,6 +34,7 @@ namespace BulkyWebMVCProject.Controllers
             {
                 _db.Categories.Add(obj); // telling entity framework you have to add this category object to category table
                 _db.SaveChanges();//go to database and create that category
+                TempData["success"] = "Category created successfully"; //creating a page messaged
                 return RedirectToAction("Index");
                 //reason we redirect to index is because index and category are in same controller
                 //if they were in different controllers, you would write category, not index
@@ -64,6 +65,7 @@ namespace BulkyWebMVCProject.Controllers
             {
                 _db.Categories.Update(obj); // telling entity framework you have to update this category object to category table
                 _db.SaveChanges();//go to database and create that category
+                TempData["success"] = "Category updated successfully";
                 return RedirectToAction("Index");
                 //reason we redirect to index is because index and category are in same controller
                 //if they were in different controllers, you would write category, not index
@@ -97,6 +99,7 @@ namespace BulkyWebMVCProject.Controllers
             }
             _db.Categories.Remove(obj);//remove category obj with given id
             _db.SaveChanges();//go to database and create that category
+            TempData["success"] = "Category deleted successfully";
             return RedirectToAction("Index");
             //reason we redirect to index is because index and category are in same controller
             //if they were in different controllers, you would write category, not index
